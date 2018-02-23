@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<% const menuItems = [
+    {title: 'HairCare', link: '#'},
+    {title: 'Color', link: '#'},
+    {title: 'Styling', link: '#'},
+    {title: 'Texture', link: '#'},
+    {title: 'Get Inspired', link: '#'},
+    {title: 'Social', link: '#'},
+    {title: 'News', link: '#'},
+    {title: 'About', link: '#'},
+    {title: 'Professional', link: '#'}
+
+]; %>
+<% const footerItems = [
+    {title: 'Privacy Police', link: '#'},
+    {title: 'Terms of use', link: '#'},
+    {title: 'Contact us', link: '#'},
+    {title: 'Newsletter', link: '#'},
+    {title: 'Sitemap', link: '#'}
+]; %>
+
+<% const footerImg = ['ico_facebook.svg', 'ico_twitter.svg', 'ico_pinterest.svg', 'ico_youtube.svg', 'ico_instagram.svg']; %>
+
+<% const galleryItemsDes = [
+    {title: 'layer-420.png', link: 'https://youtu.be/z8M0Fa1JVco', index: 0},
+    {title: 'layer-421.png', link: 'https://youtu.be/Wi2KcdoCuo4', index: 1},
+    {title: 'layer-422.png', link: 'https://youtu.be/8H6dYUgQKB8', index: 2},
+    {title: 'layer-423.png', link: 'https://youtu.be/PZjGrmHdFME', index: 3},
+    {title: 'layer-424.png', link: 'https://youtu.be/_wLGr24VeoI', index: 4},
+    {title: 'layer-425.png', link: 'https://youtu.be/DG4FAU5qmMY', index: 5}
+]; %>
+
+<% const galleryItemsCraft = [
+    {title: 'layer-423.png', link: 'https://youtu.be/RmNWNLXmswk', index: 0},
+    {title: 'layer-424.png', link: 'https://youtu.be/-tztXOz8Vc0', index: 1},
+    {title: 'layer-425.png', link: 'https://youtu.be/kUfIVtyydgQ', index: 2}
+]; %>
+
+<% const galleryItemsInspiration = [
+    {title: 'layer-426.png', link: 'https://youtu.be/VmmwwzR536g', index: 0},
+    {title: 'layer-427.png', link: 'https://youtu.be/vz0k8O-Ef9Y', index: 1},
+    {title: 'layer-428.png', link: 'https://youtu.be/6oPBFnsqJW8', index: 2}
+]; %>
+
+<header class="header">
+    <div class="header__top">
+        <div class="company">
+            <div class="company-content">
+                <p class="company-content__name">NEAREST SALON<img src="img/ico_dropdown.svg" alt=""
+                                                                   class="company-content__image"></p>
+                <p class="company-content__address">Plush Salon 92101</p>
+            </div>
+        </div>
+        <input type="button" class="menu-mobile__content" value="≡">
+        <div class="logo__name"><a href=""><img src="img/logo.svg" alt="" class="logo_size"></a></div>
+        <div class="search__content_tablet">
+            <input type="text" class="search__text" placeholder="Search...">
+            <img src="img/ico_search.svg" alt="" class="search__img" id="btnSearch">
+        </div>
+    </div>
+
+    <div class="logo__name_tablet"><a href=""><img src="img/logo.svg" alt="" class="logo_size"></a></div>
+
+    <div class="menu_background">
+        <div class="menu-content active" id="menu-mobile">
+            <ul class="menu-mobile__list">
+                <% menuItems.forEach((item) => { %>
+                <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %>
+                        <hr>
+                    </a></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+        <div class="menu header__menu">
+            <% menuItems.forEach((item) => { %>
+            <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
+            <% }) %>
+        </div>
+
+        <div class="search">
+
+            <input type="text" class="search__field">
+            <div class="search-location">
+                <p class="search-location__name">NEAREST SALON<img src="img/ico_dropdown.svg" alt=""
+                                                                   class="search-location__image"></p>
+                <p class="search-location__address">Plush Salon 92101</p>
+            </div>
+            <img src="img/ico_search.svg" alt="" class="search__img" id="searchButton">
+        </div>
+    </div>
+</header>
+
+<section id="gallery" class="gallery">
+    <div class="breadcrumbs">
+        <a href="#" class="breadcrumbs__link">HOME</a>
+        <span class="breadcrumbs__trait">/</span>
+        <a href="#" class="breadcrumbs__link breadcrumbs__link_size">VIDEOS</a>
+    </div>
+    <h1 class="gallery__name">VIDEOS</h1>
+
+    <a href="https://youtu.be/watch?v=z8M0Fa1JVco" data-fancybox="video">
+        <img src="img/group-9%20(1).png" class="gallery__video gallery__video_indent">
+    </a>
+
+    <p class="gallery__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum facere illum maxime
+        mollitia, natus quod repellat unde. Distinctio dolor eaque iste iusto molestiae mollitia nisi non tempora totam.
+        Quas, reiciendis.</p>
+    <hr class="gallery__section">
+    <div class="category">
+        <p class="category__name">STEP
+            <span class="category__name_color"> BY </span>
+            STEP</p>
+    </div>
+
+    <div class="carousel">
+        <% galleryItemsDes.forEach((item) => { %>
+        <a href="<%= item.link; %>" data-fancybox="video" class="gallery__link">
+
+            <div><img src="img/<%= item.title %>" class="gallery__video
+                <% if (item.index === 0) { %>gallery__video_size<% } %>
+                <% if (item.index > 2) { %>gallery__video_disabled<% } %>"></div>
+        </a>
+
+        <% }) %>
+    </div>
+    <div class="gallery__button">
+        <button class="gallery__load" id="btnGallery">LOAD MORE</button>
+    </div>
+
+
+    <div class="gallery_i">
+        <div class="category category_i">
+            <p class="category__name ">CRAFT</p>
+            <p class="category__name category__name_color"> EDUCATED </p>
+        </div>
+
+        <div class="carousel">
+            <% galleryItemsCraft.forEach((item) => { %>
+            <a href="<%= item.link; %>" data-fancybox="video">
+                <img src="img/<%= item.title %>" class="gallery__video
+            <% if (item.index === 0) { %>gallery__video_size<% } %>
+              <% if (item.index > 2) { %>gallery__video_disabled<% } %>
+         ">
+            </a>
+
+            <% }) %>
+        </div>
+        <div class="gallery__button">
+            <button class="gallery__load" id="btnGalleryCraft">LOAD MORE</button>
+        </div>
+    </div>
+
+    <div class="gallery_i">
+        <div class="category step_i">
+            <p class="category__name">INSPIRATION</p>
+
+        </div>
+
+        <div class="carousel">
+            <% galleryItemsInspiration.forEach((item) => { %>
+            <a href="<%= item.link; %>" data-fancybox="video">
+                <img src="img/<%= item.title %>" class="gallery__video
+            <% if (item.index === 0) { %>gallery__video_size<% } %>
+              <% if (item.index > 2) { %>gallery__video_disabled<% } %>
+         ">
+            </a>
+            <% }) %>
+        </div>
+        <div class="gallery__button">
+            <button class="gallery__load" id="btnGalleryInspiration">LOAD MORE</button>
+        </div>
+    </div>
+
+</section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="feedback">
+            <% footerImg.forEach((item) => { %>
+            <a class="feedback__link" href=""> <img src="img/<%= item %>" alt="#" class="feedback__item"></a>
+            <% }) %>
+        </div>
+
+        <div class="footer__location">
+            <div class="location__content"><span class="location__item">LOCATION:</span> <span
+                        class="location__item_country">UNITED STATE  &#160</span></div>
+            <div class="location__content"><span class="location__item">LANGUAGE:</span> <span
+                        class="location__item_country">ENGLICH</span></div>
+        </div>
+
+
+        <div class="footer__menu">
+
+            <% footerItems.forEach((item) => { %>
+            <li class="footer__item"><a class="footer__link" href="<%= item.link; %>"><%= item.title %></a></li>
+            <% }) %>
+
+        </div>
+    </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
